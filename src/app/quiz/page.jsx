@@ -54,7 +54,8 @@ const QuizPage = () => {
           autoPlay
           loop
           muted
-          className="w-full h-auto"></video>
+          className="w-full h-auto"
+        ></video>
       </div>
 
       <div className="container mx-auto max-w-4xl px-6">
@@ -76,7 +77,8 @@ const QuizPage = () => {
                       key={index}
                       variant="outline"
                       className="py-4 hover:bg-blue-500 hover:text-white"
-                      onClick={() => handleAnswerClick(option)}>
+                      onClick={() => handleAnswerClick(option)}
+                    >
                       {option}
                     </Button>
                   )
@@ -102,22 +104,7 @@ const QuizPage = () => {
                 Your score: <span className="font-bold">{score}</span> out of{" "}
                 {quizQuestions.length}
               </p>
-              <div
-                class="tenor-gif-embed"
-                data-postid="27635363"
-                data-share-method="host"
-                data-aspect-ratio="1.78771"
-                data-width="100%">
-                <a href="https://tenor.com/view/thofinn-gif-27635363">
-                  Thofinn GIF
-                </a>
-                from{" "}
-                <a href="https://tenor.com/search/thofinn-gifs">Thofinn GIFs</a>
-              </div>{" "}
-              <script
-                type="text/javascript"
-                async
-                src="https://tenor.com/embed.js"></script>
+              <TensorElement score={score} />
             </CardContent>
             <CardFooter className="flex justify-center">
               <Button
@@ -126,7 +113,8 @@ const QuizPage = () => {
                   setScore(0);
                   setCurrentQuestionIndex(0);
                   setShowScore(false);
-                }}>
+                }}
+              >
                 Restart Quiz
               </Button>
             </CardFooter>
@@ -149,5 +137,121 @@ const QuizPage = () => {
     </div>
   );
 };
-
+function TensorElement({ score: score }) {
+  if (score <= 2) {
+    return (
+      <>
+        <div
+          class="tenor-gif-embed"
+          data-postid="27635363"
+          data-share-method="host"
+          data-aspect-ratio="1.78771"
+          data-width="100%"
+        >
+          <a href="https://tenor.com/view/thofinn-gif-27635363">Thofinn GIF</a>
+          from <a href="https://tenor.com/search/thofinn-gifs">Thofinn GIFs</a>
+        </div>{" "}
+        <script
+          type="text/javascript"
+          async
+          src="https://tenor.com/embed.js"
+        ></script>
+      </>
+    );
+  } else if (score <= 4) {
+    return (
+      <>
+        <div
+          class="tenor-gif-embed"
+          data-postid="22500292"
+          data-share-method="host"
+          data-aspect-ratio="1"
+          data-width="100%"
+        >
+          <a href="https://tenor.com/view/theres-still-time-mr-grooberson-paul-rudd-ghostbusters-afterlife-we-have-enough-time-gif-22500292">
+            Theres Still Time Mr Grooberson GIF
+          </a>
+          from{" "}
+          <a href="https://tenor.com/search/theres+still+time-gifs">
+            Theres Still Time GIFs
+          </a>
+        </div>{" "}
+        <script
+          type="text/javascript"
+          async
+          src="https://tenor.com/embed.js"
+        ></script>
+      </>
+    );
+  } else if (score <= 6) {
+    return (
+      <>
+        <div
+          class="tenor-gif-embed"
+          data-postid="11157824601050747846"
+          data-share-method="host"
+          data-aspect-ratio="0.891566"
+          data-width="100%"
+        >
+          <a href="https://tenor.com/view/shrek-shrek-rizz-rizz-gif-11157824601050747846">
+            Shrek Shrek Rizz GIF
+          </a>
+          from <a href="https://tenor.com/search/shrek-gifs">Shrek GIFs</a>
+        </div>{" "}
+        <script
+          type="text/javascript"
+          async
+          src="https://tenor.com/embed.js"
+        ></script>
+      </>
+    );
+  } else if (score <= 8) {
+    return (
+      <>
+        <div
+          class="tenor-gif-embed"
+          data-postid="2243382899312612755"
+          data-share-method="host"
+          data-aspect-ratio="1.34228"
+          data-width="100%"
+        >
+          <a href="https://tenor.com/view/aizen-drinking-sip-drink-bleach-gif-2243382899312612755">
+            Aizen Drinking GIF
+          </a>
+          from <a href="https://tenor.com/search/aizen-gifs">Aizen GIFs</a>
+        </div>{" "}
+        <script
+          type="text/javascript"
+          async
+          src="https://tenor.com/embed.js"
+        ></script>
+      </>
+    );
+  } else {
+    return (
+      <>
+        <div
+          class="tenor-gif-embed"
+          data-postid="1750056094467610487"
+          data-share-method="host"
+          data-aspect-ratio="1.79137"
+          data-width="100%"
+        >
+          <a href="https://tenor.com/view/april-fools-joke-dog-its-fine-this-is-not-gif-1750056094467610487">
+            April Fools Joke GIF
+          </a>
+          from{" "}
+          <a href="https://tenor.com/search/april+fools-gifs">
+            April Fools GIFs
+          </a>
+        </div>{" "}
+        <script
+          type="text/javascript"
+          async
+          src="https://tenor.com/embed.js"
+        ></script>
+      </>
+    );
+  }
+}
 export default QuizPage;
