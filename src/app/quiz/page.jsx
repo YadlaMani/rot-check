@@ -94,6 +94,7 @@ const QuizPage = () => {
                       variant="outline"
                       className="py-4 hover:bg-black hover:text-white"
                       onClick={() => handleAnswerClick(option)}>
+
                       {option}
                     </Button>
                   )
@@ -128,7 +129,8 @@ const QuizPage = () => {
                   setScore(0);
                   setCurrentQuestionIndex(0);
                   setShowScore(false);
-                }}>
+                }}
+              >
                 Restart Quiz
               </Button>
             </CardFooter>
@@ -145,7 +147,6 @@ const QuizPage = () => {
     </div>
   );
 };
-
 function TensorElement({ score: score }) {
   if (score <= 2) {
     return (
@@ -185,6 +186,7 @@ function TensorElement({ score: score }) {
         <script
           type="text/javascript"
           async
+
           src="https://tenor.com/embed.js"></script>
       </>
     );
@@ -236,7 +238,8 @@ function TensorElement({ score: score }) {
           data-postid="1750056094467610487"
           data-share-method="host"
           data-aspect-ratio="1.79137"
-          data-width="100%">
+ 
+          data-width="100%"> 
           <a href="https://tenor.com/view/april-fools-joke-dog-its-fine-this-is-not-gif-1750056094467610487">
             April Fools Joke GIF
           </a>
@@ -248,10 +251,11 @@ function TensorElement({ score: score }) {
         <script
           type="text/javascript"
           async
+ 
           src="https://tenor.com/embed.js"></script>
       </>
     );
   }
 }
-
+ 
 export default QuizPage;
