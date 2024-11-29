@@ -125,15 +125,6 @@ const QuizPage = () => {
       <div>
         <img src={`/incredibles/${score + 1}.jpeg`}></img>
       </div>
-
-      {/* <div className="video-container w-[30%]">
-        <video
-          src="/manicraft.mp4" // Path to the video in the public folder
-          autoPlay
-          loop
-          muted
-          className="w-full h-auto"></video>
-      </div> */}
     </div>
   );
 };
